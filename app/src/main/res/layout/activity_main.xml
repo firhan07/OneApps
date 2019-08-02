@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000"
+    tools:context="com.example.apprecycleviewhorizontal.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="?android:attr/windowBackground"
+        android:backgroundTint="#FFF"
+        android:foreground="?attr/selectableItemBackground"
+        app:itemIconSize="20dp"
+        app:layout_behavior="android.support.design.behavior.HideBottomViewOnScrollBehavior"
+        app:menu="@menu/navigation" />
+
+    <include layout="@layout/content_main" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginLeft="285dp"
+        android:layout_marginBottom="55dp"
+        android:clickable="true"
+        android:src="@drawable/ic_account_balance_wallet_black_24dp"
+        android:tint="#FFF"
+        app:backgroundTint="#11FF00"
+        app:elevation="8dp" />
+
+</android.support.design.widget.CoordinatorLayout><!--<android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="10dp" />
+
+    <ImageView
+
+        android:id="@+id/iv1"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_below="@+id/recycler"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="16dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:onClick="pesan"
+        android:text="Pesan" />
+
+    <TextView
+        android:id="@+id/tvPRICE"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/recycler"
+        android:text="Price"
+        android:textColor="#fff" />
+
+    <TextView
+        android:id="@+id/tvHarga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvPRICE"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Silahkan Memesan"
+        android:textColor="#fff" />-->

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/new_item"
+        android:title="Termurah"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/upload_item"
+        android:title="Termahal"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/copy_item"
+        android:title="Trending"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share_item"
+        android:title="Jual"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/bookmark_item"
+        android:title="Beli"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/list_item"
+        android:title="Pengaturan"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share"
+        android:title="Share"
+        app:showAsAction="never"
+        app:actionProviderClass="android.support.v7.widget.ShareActionProvider"/>
+
+
+    <item
+        android:id="@+id/app_bar_menu_search"
+        android:icon="@drawable/ic_menu_search"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+</menu>

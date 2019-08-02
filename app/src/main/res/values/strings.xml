@@ -1,0 +1,17 @@
+<resources>
+    <string name="prompt_email">Email</string>
+    <string name="app_name">One Apps</string>
+    <string name="title_store">Store</string>
+    <string name="title_types">Types</string>
+    <string name="title_search">Search</string>
+    <string name="search_hint">Enter text to Search </string>
+    <string name="title_chatting">Chatting</string>
+    <string name="title_profile">Profile</string>
+    <string name="input_placeholder">Write a message</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text_to_display">Text to display</string>
+    <string name="prompt_password">prompt_password</string>
+    <string name="action_sign_in_short">action_sign_in_short</string>
+    <string name="action_sign_in">action_sign_in</string>
+    <string name="nama">Nama :</string>
+</resources>

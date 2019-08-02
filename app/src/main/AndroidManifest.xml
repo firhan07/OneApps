@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.apprecycleviewhorizontal"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pemandangan"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/pemandangan"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ChatActivity" />
+        <activity android:name=".Chatinfo" />
+        <activity android:name=".BantuanActivity" />
+        <activity android:name=".PenjualanActivity" />
+        <activity android:name=".PesananActivity" />
+        <activity android:name=".AccountActivity" />
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".PengaturanActivity" />
+        <activity android:name=".BeliActivity" />
+        <activity android:name=".JualActivity" />
+        <activity android:name=".TrendingActivity" />
+        <activity android:name=".TermahalActivity" />
+        <activity android:name=".TermurahActivity" />
+        <activity android:name=".Detailinfo" />
+        <activity android:name=".DetailOrderKonfirmasi" />
+        <activity android:name=".SplashScreen">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+               <action android:name="android.intent.action.SEARCH" />
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+           <intent-filter>
+               <action android:name=".DetailOrderKonfirmasi" />
+
+               <category android:name="android.intent.category.DEFAULT" />
+           </intent-filter>
+       </activity>-->
+        <activity
+            android:name=".OrderDetail"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="com.example.apprecycleviewhorizontal.OrderDetail" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
