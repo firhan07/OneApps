@@ -25,12 +25,14 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
     private Context mContext;
     private ArrayList<Button> mButton;
     private ArrayList<String> mKategori;
-    private ArrayList<String> mDeskripsi;
+    private ArrayList<String> mDeskripsi = new ArrayList<>();
 
-    public RecycleViewAdapter(Context mContext, ArrayList<String> mImageTitles, ArrayList<String> mImages, ArrayList<Button> mButton) {
+    public RecycleViewAdapter(Context mContext, ArrayList<String> mImageTitles, ArrayList<String> mImages,
+                              ArrayList mDeskripsi, ArrayList<Button> mButton) {
         this.mImageTitles = mImageTitles;
         this.mImages = mImages;
         this.mContext = mContext;
+        this.mDeskripsi = mDeskripsi;
         this.mButton = mButton;
     }
 
@@ -56,6 +58,7 @@ public class RecycleViewAdapter extends RecyclerView.Adapter<RecycleViewAdapter.
                 Intent i = new Intent(mContext, DetailsActivity.class);
                 i.putExtra("title", mImageTitles.get(position));
                 i.putExtra("image", mImages.get(position));
+                i.putExtra("deskripsi", mDeskripsi.get(position));
                 mContext.startActivity(i);
             }
         });

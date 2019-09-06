@@ -30,7 +30,7 @@ public class TypesFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_types, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view);
         RecycleViewAdapter adapter = new RecycleViewAdapter(getContext(),mImagesData.getmTitles(),
-                mImagesData.getmImageUrls(),mImagesData.getmButtonDetails());
+                mImagesData.getmImageUrls(), mImagesData.getmDeskripsi(), mImagesData.getmButtonDetails());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         return view;

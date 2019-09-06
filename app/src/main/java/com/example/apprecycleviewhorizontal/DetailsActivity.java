@@ -30,6 +30,7 @@ public class DetailsActivity extends AppCompatActivity {
                 .load(getIntent().getStringExtra("image"))
                 .into(iv);
         String deskripsiDetail = getIntent().getStringExtra("title");
+        deskripsiDetail += "\n\n" + getIntent().getStringExtra("deskripsi");
         textView.setText(deskripsiDetail);
 
 
