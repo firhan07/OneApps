@@ -16,14 +16,16 @@ import java.util.ArrayList;
 
 public class HorizontalAdapter extends RecyclerView.Adapter<HorizontalAdapter.ViewHolder> {
 
+    public static ArrayList<String> mDeskripsi = new ArrayList<>();
     private ArrayList<String> mImageTitles = new ArrayList<>();
     private ArrayList<String> mImages = new ArrayList<>();
     private Context mContext;
     private View.OnClickListener mOnItemClickListener;
 
-    public HorizontalAdapter(Context mContext, ArrayList<String> mImageTitles, ArrayList<String> mImages) {
+    public HorizontalAdapter(Context mContext, ArrayList<String> mImageTitles, ArrayList<String> mImages,  ArrayList<String> mDeskripsi) {
         this.mImageTitles = mImageTitles;
         this.mImages = mImages;
+        this.mDeskripsi = mDeskripsi;
         this.mContext = mContext;
     }
 

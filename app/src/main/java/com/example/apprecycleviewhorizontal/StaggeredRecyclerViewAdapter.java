@@ -17,18 +17,22 @@ import com.bumptech.glide.request.RequestOptions;
 
 import java.util.ArrayList;
 
+import static android.support.constraint.Constraints.TAG;
+
 public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<StaggeredRecyclerViewAdapter.ViewHolder> {
 
-    private static final String TAG = "StaggeredRecyclerView";
 
-    private ArrayList<String> mTitles = new ArrayList<>();
-    private ArrayList<String> mImageUrls = new ArrayList<>();
+    private final ArrayList<String> mTitles;
+    private final ArrayList<String> mImageUrls;
+    private final ArrayList<String> mDeskripsi;
     private Context mContext;
 
-    public StaggeredRecyclerViewAdapter(Context mContext, ArrayList<String> mTitles, ArrayList<String> mImageUrls) {
+    public StaggeredRecyclerViewAdapter(Context mContext, ArrayList<String> mTitles, ArrayList<String> mImageUrls,
+                                        ArrayList<String> mDeskripsi) {
         this.mTitles = mTitles;
         this.mImageUrls = mImageUrls;
         this.mContext = mContext;
+        this.mDeskripsi = mDeskripsi;
     }
 
     @NonNull
@@ -41,7 +45,7 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
-        Log.d(TAG, "onBindViewHolder: called");
+
 
         RequestOptions requestOptions = new RequestOptions().
                 placeholder(R.drawable.ic_launcher_background);
@@ -60,15 +64,14 @@ public class StaggeredRecyclerViewAdapter extends RecyclerView.Adapter<Staggered
                 Intent i = new Intent(mContext, Detailinfo.class);
                 i.putExtra("title", mTitles.get(position));
                 i.putExtra("image", mImageUrls.get(position));
+                i.putExtra("deskripsi", mDeskripsi.get(position));
                 mContext.startActivity(i);
             }
         });
     }
 
     @Override
-    public int getItemCount() {
-        return mImageUrls.size();
-    }
+    public int getItemCount() { return mImageUrls.size(); }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView image;

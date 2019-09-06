@@ -14,4 +14,5 @@
     <string name="action_sign_in_short">action_sign_in_short</string>
     <string name="action_sign_in">action_sign_in</string>
     <string name="nama">Nama :</string>
+    <string name="deskripsi_detail">deskripsi_detail</string>
 </resources>

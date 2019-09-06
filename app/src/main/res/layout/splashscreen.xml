@@ -4,24 +4,24 @@
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="center"
-    android:background="#fff"
+    android:background="#0004FF"
     tools:context=".SplashScreen">
 
     <ImageView
-        android:layout_marginBottom="400dp"
+        android:layout_marginBottom="300dp"
         android:id="@+id/logo_id"
-        android:layout_width="200dp"
-        android:layout_height="100dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/pemandangan"/>
+        android:src="@drawable/ic_golf_course_black_24dp"/>
 
     <TextView
-        android:layout_marginTop="480dp"
+        android:layout_marginTop="400dp"
         android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="One Apps"
         android:textSize="50sp"
-        android:textColor="#00FF19"/>
+        android:textColor="#fff"/>
 </RelativeLayout>

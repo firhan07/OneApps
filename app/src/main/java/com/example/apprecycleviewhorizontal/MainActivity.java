@@ -12,7 +12,6 @@ import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.SearchView;
 import android.support.v7.widget.ShareActionProvider;
@@ -25,19 +24,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.example.apprecycleviewhorizontal.BeliActivity;
-import com.example.apprecycleviewhorizontal.GiftsFragment;
-import com.example.apprecycleviewhorizontal.JualActivity;
-import com.example.apprecycleviewhorizontal.KaosAdapter;
-import com.example.apprecycleviewhorizontal.KaosDataModel;
-import com.example.apprecycleviewhorizontal.PengaturanActivity;
-import com.example.apprecycleviewhorizontal.ProfileFragment;
-import com.example.apprecycleviewhorizontal.R;
-import com.example.apprecycleviewhorizontal.StaggeredFragment;
-import com.example.apprecycleviewhorizontal.TermahalActivity;
-import com.example.apprecycleviewhorizontal.TermurahActivity;
-import com.example.apprecycleviewhorizontal.TrendingActivity;
 
 import java.util.ArrayList;
 
@@ -66,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // load the store fragment by default
-        toolbar.setTitle("Shop");
+        toolbar.setTitle("OneApps");
         loadFragment(new HorizontalFragment());
     }
 
@@ -78,27 +64,27 @@ public class MainActivity extends AppCompatActivity {
             Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_store:
-                    toolbar.setTitle("Store");
+                    toolbar.setTitle("OneApps");
                     fragment = new HorizontalFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_types:
-                    toolbar.setTitle("Types");
-                    fragment = new GiftsFragment();
+                    toolbar.setTitle("OneApps");
+                    fragment = new TypesFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_search:
-                    toolbar.setTitle("Search");
+                    toolbar.setTitle("OneApps");
                     fragment = new StaggeredFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_chatting:
-                    toolbar.setTitle("Chatting");
+                    toolbar.setTitle("OneApps");
                     fragment = new ChattingFragment();
                     loadFragment(fragment);
                     return true;
                 case R.id.navigation_profile:
-                    toolbar.setTitle("Profile");
+                    toolbar.setTitle("OneApps");
                     fragment = new ProfileFragment();
                     loadFragment(fragment);
                     return true;

@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 
-
+import java.util.Objects;
 
 
 public class HorizontalFragment extends Fragment {
@@ -29,6 +29,7 @@ public class HorizontalFragment extends Fragment {
             RecyclerView.ViewHolder viewHolder = (RecyclerView.ViewHolder) view.getTag();
             position = viewHolder.getAdapterPosition();
             String s = mImagesData.getImagePosition(position);
+            String infoDetail = HorizontalAdapter.mDeskripsi.get(position);
             TextView tvHarga = getActivity().findViewById(R.id.tvHarga);
             tvHarga.setText("Rp. " + mImagesData.getHarga(position));
             ImageView iv1 = getActivity().findViewById(R.id.iv1);
@@ -36,6 +37,8 @@ public class HorizontalFragment extends Fragment {
                     .asBitmap()
                     .load(s)
                     .into(iv1);
+            TextView tvHorizontalDeskripsi =(getActivity()).findViewById(R.id.tv_horizontal_deskripsi);
+            tvHorizontalDeskripsi.setText(infoDetail);
         }
     };
 
@@ -55,7 +58,7 @@ public class HorizontalFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_horizontal, container, false);
         RecyclerView recyclerView = view.findViewById(R.id.recycler_view_horizontal);
         HorizontalAdapter adapter = new HorizontalAdapter(getContext(), mImagesData.getmTitles(),
-                mImagesData.getmImageUrls());
+                mImagesData.getmImageUrls(), mImagesData.getmDeskripsi());
         recyclerView.setAdapter(adapter);
         // recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
